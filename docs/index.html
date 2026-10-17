@@ -1,12 +1,2031 @@
-<!doctype <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Placeholder</title>
-  </head>
-  <body>
-    <h1>Placeholder</h1> 
-    <<p>This is a placeholder to get GH pages working.</p>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: ;
+--logo-size: ;
+--text-scale-intensity: ;
+--darkaccent1color: ;
+--lightaccent1color: ;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #FFF;
+--darktitletextcolor: #000;
+--lightbodytextcolor: #FFF;
+--darkbodytextcolor: #000;
+--lightbackgroundcolor: #FFF;
+--darkbackgroundcolor: #000;
+--bodyfont: iA Garamond;
+--titlefont: iA Garamond;
+--lightframecolor: #FFFFFF;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/garamond.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<link rel="stylesheet" href="engine/billboard.min.css">
+</head>
+<body class="responsive  ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="ideasworthstealing">Ideas Worth Stealing</h1> 
+  <p>XO Ruby Montreal - 2026-10-17</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark v-split-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="slides">Slides</h1> 
+  <p>https://davidcornu.github.io/ideas-worth-stealing-talk/</p>
+ </div> 
+ <figure class="">
+  <img src="media/qr-code-ideas 1.svg" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/xo-ruby-logo.svg" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="why">Why?</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="1.rubyisamashup">1. Ruby is a mashup</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="txt">% Yield odd numbers from 1 to n
+odds = iter(n:int) yields int
+  i:int
+
+  i = 1
+  while i &lt; n do
+    yield i
+    i := i + 2
+  end
+end odds
+</code></pre> 
+  <pre><code class="txt">for i:int in odds(13) do
+  print int$unparse(i) || "\n"
+end
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ruby">def odds(n)
+  i = 1
+  while i &lt; n
+    yield i
+    i += 2
+  end
+end
+</code></pre> 
+  <pre><code class="ruby">odds(13) { |i| puts i }
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ruby">Odds = Struct.new(:n) do
+  include Enumerable
+
+  def each(&amp;block)
+    odds(n, &amp;block)
+  end
+end
+</code></pre> 
+  <pre><code class="ruby">Odds.new(13).map { it * it }
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="kotlin">val numbers = listOf(1, 2, 3)
+println(numbers.map { it * it })
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="rust">fn odds(n: usize) -&gt; impl Iterator&lt;Item = usize&gt; {
+    let mut i = 1;
+
+    std::iter::from_fn(move || {
+        if i &lt; n {
+            let current = i;
+            i += 2;
+            Some(current)
+        } else {
+            None
+        }
+    })
+}
+</code></pre> 
+  <pre><code class="rust">fn main() {
+    let odds_13: Vec&lt;_&gt; = odds(13).map(|i| i * i).collect();
+    dbg!(odds_13);
+}
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="librariestoo">Libraries too</h1> 
+  <ul> 
+   <li><code>insta</code> (rust) → <code>ruby-insta</code></li> 
+   <li><code>Data::Faker</code> (perl) → <code>faker</code></li> 
+   <li>Erlang/OTP → <code>celluloid</code></li> 
+   <li>Clojure / Persistent Data Structures -&gt; <code>hamster</code> (ruby), <code>immer</code> (js)</li> 
+   <li>Bundler → Cargo</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="greatartistssteal">Great artists steal</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/seven-languages.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/arrival.png" class=" position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="2.wereheretowriterobustandmaintainablecode">2. We're here to write robust and maintainable code</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/early-vs-late-career.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <div class="element-group has-media has-media-first has-media-last">
+  <div class="html-videoWrapper">
+   <video data-autoplay playsinline webkit-playsinline class=" size-contain position-center-center">
+    <source src="media/friday-fails.mp4" />
+   </video>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/trail-building.jpg" class=" position-center-center" />
+  <figcaption>
+   “Griffin Trail Day” by thesilverfactor, CC BY-NC-SA 2.0h ttps://flic.kr/p/6iLQsg
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark v-split-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="buildsafetrails">Build safe trails</h1>
+ </div> 
+ <div class="element-group">
+  <h1 id="eliminateentirecategoriesofbugs">Eliminate entire categories of bugs</h1> 
+  <p>(e.g. memory safety)</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/revoking-the-privilege.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://medium.com/@gmalette/revoking-the-privilege-b2af90a84d84
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark v-split-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="buildsafetrails">Build safe trails</h1>
+ </div> 
+ <div class="element-group">
+  <h1 id="minimizeavoidablemistakes">Minimize avoidable mistakes</h1> 
+  <ul> 
+   <li>SQL injection (<code>ActiveRecord</code> DSL)</li> 
+   <li>HTML injection (safe strings)</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="geloofwaardigesnelheidslimieten🇳🇱">Geloofwaardige Snelheidslimieten 🇳🇱</h1> 
+  <p>(Credible Speed Limits)</p> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/credible-speed-limits.png" class=" size-contain position-center-center" />
+    <figcaption>
+     https://swov.nl/en/fact-sheet/speed-and-speed-management
+    </figcaption>
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark v-split-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="buildsafetrails">Build safe trails</h1>
+ </div> 
+ <div class="element-group">
+  <h1 id="←shiftleft">← Shift left</h1> 
+  <p>(i.e. catch issues early)</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/staffing-context.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/cookie-check.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://github.com/rails/rails/blob/v8.1.4/actionpack/lib/action_dispatch/middleware/cookies.rb#L612-L619
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/android-security.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://security.googleblog.com/2024/09/eliminating-memory-safety-vulnerabilities-Android.html
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="greatartistsstealdavidstheft"><del>Great artists steal</del> David's theft</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="echouser"><code>echo $USER</code></h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/lockup_dark_edited.svg" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="agenda">Agenda</h1> 
+  <ol> 
+   <li>Newtypes</li> 
+   <li>Declarative schemas</li> 
+   <li>Implementation-driven specs</li> 
+   <li>Runtime assertions</li> 
+   <li>Snapshot tests</li> 
+   <li>Results</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="1.newtypesbrandedtypes">1. Newtypes / Branded types</h1> 
+  <p>Lightweight wrappers around primitives</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="rust">struct NonZero(u64);
+
+fn non_zero(num: u64): NonZero {
+  if num == 0 {
+    panic!("don't do that");
+  }
+    
+  return NonZero(num);
+}
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="money"><code>Money</code></h1> 
+  <pre><code class="ruby">usd_cents = 100 # not great
+amount = Money.from_subunits(100, "USD") # $1.00
+amount == Money.from_subunits(100, "JPY") # false
+</code></pre> 
+  <p>https://github.com/Shopify/money</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="units">Units</h1> 
+  <pre><code class="f#">let convertg2kg (x : float&lt;g&gt;) = x / 1000.0&lt;g/kg&gt;
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="safevalues">Safe values</h1> 
+  <pre><code class="ts">declare const AuthorizedCustomerBrand: unique symbol;
+
+export type AuthorizedCustomer = CustomerContext &amp; {
+  readonly [AuthorizedCustomerBrand]: true;
+};
+
+// mint an `AuthorizedCustomer` based on request context
+
+function privilegedAction(customer: AuthorizedCustomer) {
+  // ...
+}
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="safevaluesinruby">Safe values (in Ruby)</h1> 
+  <pre><code class="ruby">ShopId = Struct.new(:id) do
+  def unwrap_shop_id!
+    self.id
+  end
+end
+</code></pre> 
+  <pre><code class="ruby">unless id.instance_of?(ShopId)
+  raise ArgumentError, "..."
+end
+</code></pre> 
+  <pre><code class="ruby">id.unwrap_shop_id! # raises `NoMethodError` if incorrect
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="2.declarativeschemas">2. Declarative schemas</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="rust">pub enum Value {
+    Null,
+    Bool(bool),
+    Number(Number),
+    String(String),
+    Array(Vec&lt;Value&gt;),
+    Object(Map&lt;String, Value&gt;),
+}
+</code></pre> 
+  <pre><code class="rust">let response: Value = serde_json::from_str("...").unwrap();
+</code></pre> 
+  <pre><code>if let Value::Object(user) = response {
+  if let Some(Value::String(id)) = user.get("id") {
+    dbg!(id);
+  }
+}
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ruby">response = JSON.parse("...")
+puts response.dig("user", "id")
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="rust">#[derive(Deserialize)]
+struct Response {
+  user: User
+}
+
+#[derive(Deserialize)]
+struct User {
+  id: String
+}
+</code></pre> 
+  <pre><code class="rust">let response: Response = serde_json::from_str("...").unwrap();
+dbg!(response.user.id); // Always there
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ts">import z from "zod";
+
+const ResponseSchema = z.object({
+  user: z.object({
+    id: z.string(),
+  }),
+});
+</code></pre> 
+  <pre><code class="ts">const response = ResponseSchema.parse(JSON.parse("..."));
+console.log(response.user.id);
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="benefits">Benefits</h1> 
+  <ul> 
+   <li>Documentation</li> 
+   <li>Fail fast in one place when an assumption is broken</li> 
+   <li>Easier to audit</li> 
+   <li>Keep downstream code free of guards</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="uses">Uses</h1> 
+  <ul> 
+   <li>Your API's responses 
+    <ul> 
+     <li>Did a database schema update change your response format?</li> 
+    </ul></li> 
+   <li>Third-party API responses 
+    <ul> 
+     <li>Is an undocumented field always there?</li> 
+    </ul></li> 
+   <li>Query parameters / request bodies 
+    <ul> 
+     <li>Is <code>?sort_by=whoops</code> a supported value?</li> 
+    </ul></li> 
+   <li>Database rows (e.g. JSON columns) 
+    <ul> 
+     <li>Did we write more data than intended?</li> 
+    </ul></li> 
+   <li>As the source of truth for specs like JSON Schema</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="hyrumslaw">Hyrum's law</h1> 
+  <blockquote lang="en"> 
+   <p>With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviours of your system will be depended on by somebody.</p> 
+  </blockquote>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="inruby">In Ruby</h1> 
+  <ul> 
+   <li><code>Dry::Struct</code> 
+    <ul> 
+     <li>https://hanakai.org/learn/dry/dry-struct/v1.8</li> 
+    </ul></li> 
+   <li><code>Dry::Validation</code> 
+    <ul> 
+     <li>https://hanakai.org/learn/dry/dry-validation/v1.11</li> 
+    </ul></li> 
+   <li><code>blueprinter</code> is a more lightweight approach for serialization 
+    <ul> 
+     <li>https://github.com/procore-oss/blueprinter</li> 
+    </ul></li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Screen Shot 2026-10-17 at 01.36.41.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://hanakai.org/learn/dry/dry-struct/v1.8
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="2.5.usemorestructuredobjects">2.5. Use more structured objects</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ruby">create_todo(user_id: 123, project_id: 456)
+send_notification(user_id: 123, project_id: 456)
+</code></pre> 
+  <pre><code class="ruby">ProjectContext = Struct.new(
+  :user_id, 
+  :project_id, 
+  keyword_init: true
+)
+context = ProjectContext.new(
+  user_id: 123, 
+  project_id: 123
+)
+create_todo(context)
+send_notification(context)
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="3.implementation-derivedspecs">3. Implementation-derived specs</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/graphql-ruby.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="openapi">OpenAPI</h1> 
+  <ul> 
+   <li>FastAPI 
+    <ul> 
+     <li>https://fastapi.tiangolo.com/</li> 
+    </ul></li> 
+   <li>Dropshot 
+    <ul> 
+     <li>https://github.com/oxidecomputer/dropshot</li> 
+    </ul></li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="rust">/// Fuzzy search all available locations
+#[endpoint(
+    method = GET,
+    path = "/locations/search",
+    tags = ["locations"]
+)]
+async fn locations_search(
+    rqctx: RequestContext&lt;Arc&lt;State&gt;&gt;,
+    query: Query&lt;LocationsSearchQuery&gt;,
+) -&gt; Result&lt;HttpResponseOk&lt;Vec&lt;Location&gt;&gt;, HttpError&gt; {
+    // ---
+}
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/swagger-ui.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://clear-skies.ca/swagger-ui#/locations/locations_search
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Screen Shot 2026-10-16 at 23.54.24.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://github.com/davidcornu/clear-skies/blob/main/frontend/package.json#L9
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Screen Shot 2026-10-16 at 23.52.04.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://github.com/davidcornu/clear-skies/blob/main/frontend/src/Try.svelte#L16-L18
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Screen Shot 2026-10-17 at 00.02.26.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="inruby">In Ruby</h1> 
+  <ul> 
+   <li>Grape + <code>grape-swagger</code> 
+    <ul> 
+     <li>https://github.com/ruby-grape/grape-swagger</li> 
+    </ul></li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="4.runtimeassertions">4. Runtime assertions</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Clipboard.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/compile-time-runtime.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/runtime-flavors.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="ifitsnotthrowingexceptionsthenitmustbecorrect">If it's not throwing exceptions then it must be correct</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/tiger-style.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://tigerstyle.dev/
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="inrubyapis">In Ruby APIs</h1> 
+  <ul> 
+   <li><code>Hash#fetch</code> (raises <code>KeyError</code>)</li> 
+   <li><code>Array#fetch</code> (raises <code>IndexError</code>)</li> 
+   <li><code>ActiveRecord::FinderMethods#find</code> (raises <code>ActiveRecord::RecordNotFound</code>)</li> 
+   <li><code>ActiveRecord::FinderMethods#sole</code> (raises <code>ActiveRecord::SoleRecordExceeded</code>)</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="inyourowncode">In your own code</h1> 
+  <pre><code class="ruby">def background_color(variant)
+  case variant
+  when :primary
+    "red"
+  when :secondary
+    "grey"
+  else
+    raise ArgumentError "not a valid variant: #{variant}"
+  end
+end
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="benefits">Benefits</h1> 
+  <ul> 
+   <li>Fail fast if invariants are broken</li> 
+   <li>Prevent regressions</li> 
+   <li>Downstream code can be more confident</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Screen Shot 2026-10-17 at 00.27.04.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://doc.rust-lang.org/std/macro.debug_assert.html
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="5.snapshottests">5. Snapshot tests</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="basicprinciple">Basic principle</h1> 
+  <ol> 
+   <li>Generate a snapshot the first time the test runs</li> 
+   <li>Compare subsequent runs against the snapshot, fail if they don't match</li> 
+   <li>Provider a mechanism to review the changes and update the snapshot if necessary</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/CleanShot 2026-10-17 at 00.53.55@2x.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="benefits">Benefits</h1> 
+  <ul> 
+   <li>Test complex outputs without writing tonnes of assertions</li> 
+   <li>Improve your testing UX with the snapshot format</li> 
+   <li>Catch changes to the actual output (e.g. an email template) so they can't happen accidentally</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/snapshot-format.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://github.com/hackclub/hcb/blob/main/spec/models/user/permissions_overview_spec.rb#L28-L32
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/datadriven.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://github.com/cockroachdb/cockroach/blob/master/pkg/cli/testdata/dump/comments
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="inruby">In Ruby</h1> 
+  <ul> 
+   <li>Roll your own</li> 
+   <li><code>insta-ruby</code> 
+    <ul> 
+     <li>https://github.com/marcoroth/insta-ruby</li> 
+    </ul></li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="6.results">6. Results</h1> 
+  <p>(a.k.a errors as return values)</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ruby">user = User.new(name: "David")
+user.project = Project.new(name: "TODOs")
+</code></pre> 
+  <pre><code class="ruby">user.save # false (or exception)
+user.errors # ActiveModel::Errors
+</code></pre> 
+  <pre><code class="ruby">user.save! # exception (what class?)
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ruby">begin
+  # 100 lines of business logic
+rescue StandardError =&gt; e
+  flash[:error] = "Something went wrong, please try again"
+  # bail out
+end
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="results">Results</h1> 
+  <ol> 
+   <li>Are in one of two possible states: 
+    <ol> 
+     <li>A success (with an associated value)</li> 
+     <li>A failure (with an associated error)</li> 
+    </ol></li> 
+   <li>Require the caller to check the state before accessing the success or failure values.</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/chrono-with-time.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://docs.rs/chrono/latest/chrono/struct.DateTime.html#method.with_time
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/chrono-local-result.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://docs.rs/chrono/latest/chrono/offset/enum.LocalResult.html
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <pre><code class="ts">type SignupResult = { ok: true; userId: string } | { ok: false; error: string };
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="benefits">Benefits</h1> 
+  <ul> 
+   <li>Force the caller to make a decision about how to handle critical errors (or ignore them)</li> 
+   <li>Document error cases (don't make people guess which exceptions they need to handle)</li> 
+   <li>Make error-handling part of regular control-flow</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark grid-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/CleanShot 2026-10-17 at 01.21.03@2x.png" class=" size-contain position-center-center" />
+  <figcaption>
+   https://hanakai.org/learn/dry/dry-monads/v1.8/result#value
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark default-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="inruby">In Ruby</h1> 
+  <ul> 
+   <li><code>Dry::Monad</code> 
+    <ul> 
+     <li>https://hanakai.org/learn/dry/dry-monads/v1.8/result</li> 
+    </ul></li> 
+   <li>Roll your own</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark v-split-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="⚠️trade-offs">⚠️ Trade-offs</h1>
+ </div> 
+ <div class="element-group">
+  <h1 id="spendinginnovationtokensstrangenessbudget">Spending innovation tokens / strangeness budget</h1> 
+  <ul> 
+   <li>https://steveklabnik.com/writing/the-language-strangeness-budget/</li> 
+   <li>https://mcfunley.com/choose-boring-technology</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark v-split-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="⚠️trade-offs">⚠️ Trade-offs</h1>
+ </div> 
+ <div class="element-group">
+  <h1 id="performancecost">Performance cost</h1> 
+  <ul> 
+   <li>Runtime checks aren't free</li> 
+   <li>Neither are allocations</li> 
+   <li>Measure, measure, measure</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings dark cover-container responsive" style="">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="fin">Fin</h1> 
+  <p>🐘 <a href="https://cosocial.ca/@dc">cosocial.ca/@dc</a></p> 
+  <p>🧑‍💻 <a href="https://github.com/davidcornu/">github.com/davidcornu/</a></p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/d3v4.min.js"></script>
+<script src="engine/billboard.min.js"></script>
+<script src="engine/infographics.js"></script>
+<script src="engine/highlight.min.js"></script>
+<script src="engine/katex/katex.min.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
 </html>

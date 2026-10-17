@@ -1,0 +1,21 @@
+{
+  "Name": "Garamond",
+  "Version": "1.0.4",
+  "Author": "iA",
+  "ShortDescription": "Classic Book Design",
+  "LongDescription": "Inspired by Renaissance typography, this style emphasizes readability, elegance, and proportion, echoing the traditions of classic printed books.",
+  "Css": "garamond.css",
+  "TitleFont": "iA Garamond",
+  "BodyFont": "iA Garamond",
+  "CssClasses": "variable-size-headings",
+  "LayoutExamples": [
+    {
+         "Name": "Title with Background",
+         "Markdown": "/Theme/image2.webp\nBackground: true\nopacity: 30%\n\n# TITLE\n#### with background",
+    },
+    {
+         "Name": "Subtitle with Background",
+         "Markdown": "/Theme/image2.webp\nBackground: true\nopacity: 30%\n\n## SUBTITLE\n#### with background",
+    }
+  ]
+}
